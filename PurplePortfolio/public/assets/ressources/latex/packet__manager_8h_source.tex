@@ -1,0 +1,19 @@
+\doxysection{packet\+\_\+manager.\+h}
+\hypertarget{packet__manager_8h_source}{}\label{packet__manager_8h_source}\mbox{\hyperlink{packet__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}logger.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{packet_8h}{packet.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_packet_manager}{PacketManager}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_packet_manager_a1113095a120cf08d6f7066f2225121f8}{SendPacket}}(sf::TcpSocket\&\ socket,\ \mbox{\hyperlink{struct_packet}{Packet}}*\ packet);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \mbox{\hyperlink{struct_packet}{Packet}}*\ \mbox{\hyperlink{namespace_packet_manager_ae91026b09086598f32ee710910edeeb2}{ReceivePacket}}(sf::TcpSocket\&\ socket);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ sf::Packet*\ \mbox{\hyperlink{namespace_packet_manager_a8c686834e212a9a4351e4bd3d64b8036}{CreatePacket}}(\mbox{\hyperlink{struct_packet}{Packet}}*\ packet);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \}\ \ \textcolor{comment}{//\ namespace\ PacketManager}}
+
+\end{DoxyCode}

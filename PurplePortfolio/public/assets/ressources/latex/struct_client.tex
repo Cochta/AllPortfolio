@@ -1,0 +1,101 @@
+\doxysection{Client Struct Reference}
+\hypertarget{struct_client}{}\label{struct_client}\index{Client@{Client}}
+
+
+Represents a client connected to the server.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_client_a21f86cd23fa351ce8b082e5565b5bf76}{Send\+Packet}} (\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}packet)
+\begin{DoxyCompactList}\small\item\em Sends a packet to the client. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_client_a64b6ad33eaeeb8ea9ade005584c04ca7}{Is\+Packets\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the packet queue is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_client_a75c071ed86f65180a352e5781a97d1eb}{socket}} = new sf\+::\+Tcp\+Socket()
+\item 
+std\+::queue$<$ \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{struct_client_a6a4e14a8ae82692e9547ea41760796fc}{packets\+To\+Be\+Sent}}
+\begin{DoxyCompactList}\small\item\em Queue of packets to be sent to the client. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{struct_client_a11ff73e884af0cc27b864d1186b45f9c}{mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Mutex to synchronize access to the packet queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a client connected to the server. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_client_a64b6ad33eaeeb8ea9ade005584c04ca7}\label{struct_client_a64b6ad33eaeeb8ea9ade005584c04ca7} 
+\index{Client@{Client}!IsPacketsEmpty@{IsPacketsEmpty}}
+\index{IsPacketsEmpty@{IsPacketsEmpty}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{IsPacketsEmpty()}{IsPacketsEmpty()}}
+{\footnotesize\ttfamily bool Client\+::\+Is\+Packets\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the packet queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the packet queue is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{struct_client_a21f86cd23fa351ce8b082e5565b5bf76}\label{struct_client_a21f86cd23fa351ce8b082e5565b5bf76} 
+\index{Client@{Client}!SendPacket@{SendPacket}}
+\index{SendPacket@{SendPacket}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{SendPacket()}{SendPacket()}}
+{\footnotesize\ttfamily void Client\+::\+Send\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends a packet to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the packet to be sent. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_client_a11ff73e884af0cc27b864d1186b45f9c}\label{struct_client_a11ff73e884af0cc27b864d1186b45f9c} 
+\index{Client@{Client}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex Client\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}}
+
+
+
+Mutex to synchronize access to the packet queue. 
+
+\Hypertarget{struct_client_a6a4e14a8ae82692e9547ea41760796fc}\label{struct_client_a6a4e14a8ae82692e9547ea41760796fc} 
+\index{Client@{Client}!packetsToBeSent@{packetsToBeSent}}
+\index{packetsToBeSent@{packetsToBeSent}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{packetsToBeSent}{packetsToBeSent}}
+{\footnotesize\ttfamily std\+::queue$<$\mbox{\hyperlink{struct_packet}{Packet}}\texorpdfstring{$\ast$}{*}$>$ Client\+::packets\+To\+Be\+Sent}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ std::queue<Packet*>()}
+
+\end{DoxyCode}
+
+
+Queue of packets to be sent to the client. 
+
+\Hypertarget{struct_client_a75c071ed86f65180a352e5781a97d1eb}\label{struct_client_a75c071ed86f65180a352e5781a97d1eb} 
+\index{Client@{Client}!socket@{socket}}
+\index{socket@{socket}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily sf\+::\+Tcp\+Socket\texorpdfstring{$\ast$}{*} Client\+::socket = new sf\+::\+Tcp\+Socket()}
+
+Pointer to the TCP socket associated with the client. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{client_8h}{client.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\doxysection{Network\+Client\+Manager Class Reference}
+\hypertarget{class_network_client_manager}{}\label{class_network_client_manager}\index{NetworkClientManager@{NetworkClientManager}}
+
+
+Handles receiving and sending packets from/to the server.  
+
+
+
+
+{\ttfamily \#include $<$network\+\_\+client\+\_\+manager.\+h$>$}
+
+Inheritance diagram for Network\+Client\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_network_client_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_client_manager_a850a23605fdcce6bec4f288b818bbf44}{Network\+Client\+Manager}} (std\+::string\+\_\+view host, unsigned short port)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_network_client_manager}{Network\+Client\+Manager} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_network_client_manager_ae4b486b0b69ac0c7659c71942c4c645c}{Pop\+Packet}} () override
+\begin{DoxyCompactList}\small\item\em Retrieves the next packet to process. The caller is responsible for deleting the returned packet after use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_client_manager_aab14d09317c5cdabe1e580029086d217}{Send\+Packet}} (\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}packet) override
+\begin{DoxyCompactList}\small\item\em Sends a packet to the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_client_manager_afc8a4ee02e2b5da24f3f318635234208}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the client manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_client_network_interface}{Client\+Network\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_client_network_interface_a83c74458e34e5ba633b148b602d1046d}{\texorpdfstring{$\sim$}{\string~}\+Client\+Network\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor (virtual to allow proper destruction of derived classes). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_network_client_manager_a75417e53d042bdd2ceccb0ff6720dfef}{Is\+Connected}}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the client is connected to the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles receiving and sending packets from/to the server. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_network_client_manager_a850a23605fdcce6bec4f288b818bbf44}\label{class_network_client_manager_a850a23605fdcce6bec4f288b818bbf44} 
+\index{NetworkClientManager@{NetworkClientManager}!NetworkClientManager@{NetworkClientManager}}
+\index{NetworkClientManager@{NetworkClientManager}!NetworkClientManager@{NetworkClientManager}}
+\doxysubsubsection{\texorpdfstring{NetworkClientManager()}{NetworkClientManager()}}
+{\footnotesize\ttfamily Network\+Client\+Manager\+::\+Network\+Client\+Manager (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{host,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_network_client_manager}{Network\+Client\+Manager} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & The host address of the server. \\
+\hline
+{\em port} & The port number of the server. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_network_client_manager_ae4b486b0b69ac0c7659c71942c4c645c}\label{class_network_client_manager_ae4b486b0b69ac0c7659c71942c4c645c} 
+\index{NetworkClientManager@{NetworkClientManager}!PopPacket@{PopPacket}}
+\index{PopPacket@{PopPacket}!NetworkClientManager@{NetworkClientManager}}
+\doxysubsubsection{\texorpdfstring{PopPacket()}{PopPacket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} Network\+Client\+Manager\+::\+Pop\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the next packet to process. The caller is responsible for deleting the returned packet after use. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the packet to process. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client_network_interface_aeee9c737fbeac11d1edced07798a8fba}{Client\+Network\+Interface}}.
+
+\Hypertarget{class_network_client_manager_aab14d09317c5cdabe1e580029086d217}\label{class_network_client_manager_aab14d09317c5cdabe1e580029086d217} 
+\index{NetworkClientManager@{NetworkClientManager}!SendPacket@{SendPacket}}
+\index{SendPacket@{SendPacket}!NetworkClientManager@{NetworkClientManager}}
+\doxysubsubsection{\texorpdfstring{SendPacket()}{SendPacket()}}
+{\footnotesize\ttfamily void Network\+Client\+Manager\+::\+Send\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sends a packet to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the packet to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_client_network_interface_ab1d3d9305fa8b985b510fbb2fa994a93}{Client\+Network\+Interface}}.
+
+\Hypertarget{class_network_client_manager_afc8a4ee02e2b5da24f3f318635234208}\label{class_network_client_manager_afc8a4ee02e2b5da24f3f318635234208} 
+\index{NetworkClientManager@{NetworkClientManager}!Stop@{Stop}}
+\index{Stop@{Stop}!NetworkClientManager@{NetworkClientManager}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Network\+Client\+Manager\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the client manager. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_network_client_manager_a75417e53d042bdd2ceccb0ff6720dfef}\label{class_network_client_manager_a75417e53d042bdd2ceccb0ff6720dfef} 
+\index{NetworkClientManager@{NetworkClientManager}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!NetworkClientManager@{NetworkClientManager}}
+\doxysubsubsection{\texorpdfstring{IsConnected}{IsConnected}}
+{\footnotesize\ttfamily bool Network\+Client\+Manager\+::\+Is\+Connected}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{false}}
+
+\end{DoxyCode}
+
+
+Flag indicating if the client is connected to the server. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{network__client__manager_8h}{network\+\_\+client\+\_\+manager.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\doxysection{client.\+h}
+\hypertarget{client_8h_source}{}\label{client_8h_source}\mbox{\hyperlink{client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Network.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <shared\_mutex>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{packet_8h}{packet.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_client}{Client}}\ \{}
+\DoxyCodeLine{00014\ \ \ sf::TcpSocket*\ \mbox{\hyperlink{struct_client_a75c071ed86f65180a352e5781a97d1eb}{socket}}\ =\ \textcolor{keyword}{new}\ sf::TcpSocket();\ \ }
+\DoxyCodeLine{00016\ \ \ std::queue<Packet*>\ \mbox{\hyperlink{struct_client_a6a4e14a8ae82692e9547ea41760796fc}{packetsToBeSent}}\ =}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ std::queue<Packet*>();\ \ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{mutable}\ std::shared\_mutex}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \mbox{\hyperlink{struct_client_a11ff73e884af0cc27b864d1186b45f9c}{mutex\_}};\ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_client_a21f86cd23fa351ce8b082e5565b5bf76}{SendPacket}}(\mbox{\hyperlink{struct_packet}{Packet}}*\ packet)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ std::unique\_lock\ lock(\mbox{\hyperlink{struct_client_a11ff73e884af0cc27b864d1186b45f9c}{mutex\_}});}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_client_a6a4e14a8ae82692e9547ea41760796fc}{packetsToBeSent}}.push(packet);}
+\DoxyCodeLine{00028\ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_client_a64b6ad33eaeeb8ea9ade005584c04ca7}{IsPacketsEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00035\ \ \ \ \ std::shared\_lock\ lock(\mbox{\hyperlink{struct_client_a11ff73e884af0cc27b864d1186b45f9c}{mutex\_}});}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_client_a6a4e14a8ae82692e9547ea41760796fc}{packetsToBeSent}}.empty();}
+\DoxyCodeLine{00037\ \ \ \}}
+\DoxyCodeLine{00038\ \};}
+
+\end{DoxyCode}

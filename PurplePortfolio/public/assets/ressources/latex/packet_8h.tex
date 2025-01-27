@@ -1,0 +1,198 @@
+\doxysection{packet.\+h File Reference}
+\hypertarget{packet_8h}{}\label{packet_8h}\index{packet.h@{packet.h}}
+{\ttfamily \#include $<$SFML/\+Network.\+hpp$>$}\newline
+{\ttfamily \#include "{}Metrics.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_packet}{Packet}}
+\begin{DoxyCompactList}\small\item\em Base class for packet structures. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_connect_packet}{Connect\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for establishing a connection. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_start_game_packet}{Start\+Game\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for starting a game. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_has_played_packet}{Has\+Played\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for indicating a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_game_finished_packet}{Game\+Finished\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for indicating the end of a game. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_surrender_packet}{Surrender\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for indicating a player\textquotesingle{}s surrender. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_quit_lobby_packet}{Quit\+Lobby\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for indicating a player\textquotesingle{}s quitting the lobby. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_invalid_packet}{Invalid\+Packet}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_packet}{Packet} structure for indicating a packet is invalid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{Packet\+Type}} \{ \newline
+\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a49ab28040dfa07f53544970c6d147e1e}{Connect}}
+, \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a8a7b88cd602849e993a8ba3cdef39462}{Start\+Game}}
+, \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a5fe288e48c7d34bd48f52d5001802742}{Has\+Played}}
+, \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a14ef8937ca05013b66a3775578239eb8}{Game\+Finished}}
+, \newline
+\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a92fa0b43cbcc2b7610cdb157d273c5fa}{Surrender}}
+, \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a0c774ce1dfd436584d75f8173fd1ea9c}{Quit\+Lobby}}
+, \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a4bbb8f967da6d1a610596d7257179c2b}{Invalid}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of different types of packets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_packet}{Packet}} \&packet\+Type)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_packet}{Packet}} \&packet\+Type)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a80a8531b959f2f1d00e6c919280f9eca}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_connect_packet}{Connect\+Packet}} \&message)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_ad3b9818655e78e9ed75358b4fcc22a34}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_connect_packet}{Connect\+Packet}} \&message)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_ac327d5a3bb6df9eefbe89fe37a35e4f2}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_start_game_packet}{Start\+Game\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_abd3f1dae7377b0e938b181f98fa18d08}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_start_game_packet}{Start\+Game\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a8f9dac4c9f0d2edcff1e5cf4444c68ca}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_has_played_packet}{Has\+Played\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_ac6cd40581d38eacd759df369da0c0bdd}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_has_played_packet}{Has\+Played\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a329d8712b649df738163bf58255af2eb}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_game_finished_packet}{Game\+Finished\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_ab27beeaa1a68e5b07432e5abe7134d20}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_game_finished_packet}{Game\+Finished\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a09cc7dfb12be458c47ef2ab6f7f21a71}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_surrender_packet}{Surrender\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a7d18411cc140582830ebd51b2ffdaab8}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_surrender_packet}{Surrender\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a4468719a752f69725139d62d00b8c912}{operator$<$$<$}} (sf\+::\+Packet \&packet, const \mbox{\hyperlink{struct_quit_lobby_packet}{Quit\+Lobby\+Packet}} \&content)
+\item 
+sf\+::\+Packet \& \mbox{\hyperlink{packet_8h_a9f262ed66b6a058e489f220110733fd4}{operator$>$$>$}} (sf\+::\+Packet \&packet, \mbox{\hyperlink{struct_quit_lobby_packet}{Quit\+Lobby\+Packet}} \&content)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0} 
+\index{packet.h@{packet.h}!PacketType@{PacketType}}
+\index{PacketType@{PacketType}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{PacketType}{PacketType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{Packet\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration of different types of packets. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Connect@{Connect}!packet.h@{packet.h}}\index{packet.h@{packet.h}!Connect@{Connect}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a49ab28040dfa07f53544970c6d147e1e}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a49ab28040dfa07f53544970c6d147e1e} 
+Connect&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StartGame@{StartGame}!packet.h@{packet.h}}\index{packet.h@{packet.h}!StartGame@{StartGame}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a8a7b88cd602849e993a8ba3cdef39462}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a8a7b88cd602849e993a8ba3cdef39462} 
+Start\+Game&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HasPlayed@{HasPlayed}!packet.h@{packet.h}}\index{packet.h@{packet.h}!HasPlayed@{HasPlayed}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a5fe288e48c7d34bd48f52d5001802742}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a5fe288e48c7d34bd48f52d5001802742} 
+Has\+Played&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GameFinished@{GameFinished}!packet.h@{packet.h}}\index{packet.h@{packet.h}!GameFinished@{GameFinished}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a14ef8937ca05013b66a3775578239eb8}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a14ef8937ca05013b66a3775578239eb8} 
+Game\+Finished&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Surrender@{Surrender}!packet.h@{packet.h}}\index{packet.h@{packet.h}!Surrender@{Surrender}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a92fa0b43cbcc2b7610cdb157d273c5fa}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a92fa0b43cbcc2b7610cdb157d273c5fa} 
+Surrender&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QuitLobby@{QuitLobby}!packet.h@{packet.h}}\index{packet.h@{packet.h}!QuitLobby@{QuitLobby}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a0c774ce1dfd436584d75f8173fd1ea9c}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a0c774ce1dfd436584d75f8173fd1ea9c} 
+Quit\+Lobby&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invalid@{Invalid}!packet.h@{packet.h}}\index{packet.h@{packet.h}!Invalid@{Invalid}}}\Hypertarget{packet_8h_a0a80a7bc045affcf10846075b88cbca0a4bbb8f967da6d1a610596d7257179c2b}\label{packet_8h_a0a80a7bc045affcf10846075b88cbca0a4bbb8f967da6d1a610596d7257179c2b} 
+Invalid&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{packet_8h_a80a8531b959f2f1d00e6c919280f9eca}\label{packet_8h_a80a8531b959f2f1d00e6c919280f9eca} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_connect_packet}{Connect\+Packet}} \&}]{message }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a329d8712b649df738163bf58255af2eb}\label{packet_8h_a329d8712b649df738163bf58255af2eb} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_game_finished_packet}{Game\+Finished\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a8f9dac4c9f0d2edcff1e5cf4444c68ca}\label{packet_8h_a8f9dac4c9f0d2edcff1e5cf4444c68ca} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_has_played_packet}{Has\+Played\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a58b42a984231ed7c2eda81a5914509fd}\label{packet_8h_a58b42a984231ed7c2eda81a5914509fd} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_packet}{Packet}} \&}]{packet\+Type }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a4468719a752f69725139d62d00b8c912}\label{packet_8h_a4468719a752f69725139d62d00b8c912} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_quit_lobby_packet}{Quit\+Lobby\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_ac327d5a3bb6df9eefbe89fe37a35e4f2}\label{packet_8h_ac327d5a3bb6df9eefbe89fe37a35e4f2} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_start_game_packet}{Start\+Game\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a09cc7dfb12be458c47ef2ab6f7f21a71}\label{packet_8h_a09cc7dfb12be458c47ef2ab6f7f21a71} 
+\index{packet.h@{packet.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{const \mbox{\hyperlink{struct_surrender_packet}{Surrender\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_ad3b9818655e78e9ed75358b4fcc22a34}\label{packet_8h_ad3b9818655e78e9ed75358b4fcc22a34} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_connect_packet}{Connect\+Packet}} \&}]{message }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_ab27beeaa1a68e5b07432e5abe7134d20}\label{packet_8h_ab27beeaa1a68e5b07432e5abe7134d20} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_game_finished_packet}{Game\+Finished\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_ac6cd40581d38eacd759df369da0c0bdd}\label{packet_8h_ac6cd40581d38eacd759df369da0c0bdd} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_has_played_packet}{Has\+Played\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}\label{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_packet}{Packet}} \&}]{packet\+Type }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a9f262ed66b6a058e489f220110733fd4}\label{packet_8h_a9f262ed66b6a058e489f220110733fd4} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_quit_lobby_packet}{Quit\+Lobby\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_abd3f1dae7377b0e938b181f98fa18d08}\label{packet_8h_abd3f1dae7377b0e938b181f98fa18d08} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_start_game_packet}{Start\+Game\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+
+\Hypertarget{packet_8h_a7d18411cc140582830ebd51b2ffdaab8}\label{packet_8h_a7d18411cc140582830ebd51b2ffdaab8} 
+\index{packet.h@{packet.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!packet.h@{packet.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily sf\+::\+Packet \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{sf\+::\+Packet \&}]{packet,  }\item[{\mbox{\hyperlink{struct_surrender_packet}{Surrender\+Packet}} \&}]{content }\end{DoxyParamCaption})}
+

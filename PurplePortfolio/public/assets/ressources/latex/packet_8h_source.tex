@@ -1,0 +1,93 @@
+\doxysection{packet.\+h}
+\hypertarget{packet_8h_source}{}\label{packet_8h_source}\mbox{\hyperlink{packet_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Network.hpp>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Metrics.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}\ \{}
+\DoxyCodeLine{00011\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a49ab28040dfa07f53544970c6d147e1e}{Connect}},}
+\DoxyCodeLine{00012\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a8a7b88cd602849e993a8ba3cdef39462}{StartGame}},}
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a5fe288e48c7d34bd48f52d5001802742}{HasPlayed}},}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a14ef8937ca05013b66a3775578239eb8}{GameFinished}},}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a92fa0b43cbcc2b7610cdb157d273c5fa}{Surrender}},}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a0c774ce1dfd436584d75f8173fd1ea9c}{QuitLobby}},}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a4bbb8f967da6d1a610596d7257179c2b}{Invalid}}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{struct_packet_ab1ec7232eac75450a4392bb9c10921fb}{Packet}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_packet_a530a3bfa7205acada51bbff21256af1d}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}\ \mbox{\hyperlink{struct_packet_aebbae2cef32f967d0bbcabbe41dae6bf}{type}})\ :\ \mbox{\hyperlink{struct_packet_aebbae2cef32f967d0bbcabbe41dae6bf}{type}}(\mbox{\hyperlink{struct_packet_aebbae2cef32f967d0bbcabbe41dae6bf}{type}})\ \{\}}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_packet_abac6a0862126b096c914f264c61851f6}{\string~Packet}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}\ \mbox{\hyperlink{struct_packet_aebbae2cef32f967d0bbcabbe41dae6bf}{type}}\ =\ \mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a4bbb8f967da6d1a610596d7257179c2b}{PacketType::Invalid}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_packet}{Packet}}*\ \mbox{\hyperlink{struct_packet_af27c2bcb52d685ba90f81a25dab365d2}{FromType}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}\ \mbox{\hyperlink{struct_packet_aebbae2cef32f967d0bbcabbe41dae6bf}{type}});}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_connect_packet}{ConnectPacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{struct_connect_packet_a30660af47159752624ba1eab6108900e}{ConnectPacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a49ab28040dfa07f53544970c6d147e1e}{Connect}})\ \{\}}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_connect_packet_a9fb14651cc02b66d0c74b74ecd3cef65}{ConnectPacket}}(std::string\_view\ \mbox{\hyperlink{struct_connect_packet_a19ac6ceb06cdad8cc40dfc3527b10453}{playerName}})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a49ab28040dfa07f53544970c6d147e1e}{Connect}}),\ \mbox{\hyperlink{struct_connect_packet_a19ac6ceb06cdad8cc40dfc3527b10453}{playerName}}(\mbox{\hyperlink{struct_connect_packet_a19ac6ceb06cdad8cc40dfc3527b10453}{playerName}})\ \{\}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ std::string\ \mbox{\hyperlink{struct_connect_packet_a19ac6ceb06cdad8cc40dfc3527b10453}{playerName}};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_start_game_packet}{StartGamePacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{struct_start_game_packet_a39f5a7b2f407ee280f01142586586fc6}{StartGamePacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a8a7b88cd602849e993a8ba3cdef39462}{StartGame}})\ \{\}}
+\DoxyCodeLine{00047\ \ \ std::string\ \mbox{\hyperlink{struct_start_game_packet_af2a205d504e5bbb50807b5fd69e26a5b}{p1Name}};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_start_game_packet_a21520c66bd8e3217693bb3265ae3ce4e}{p1Elo}};}
+\DoxyCodeLine{00049\ \ \ std::string\ \mbox{\hyperlink{struct_start_game_packet_a4017b5fb1be05f95d047d7fb9c8cd88e}{p2Name}};}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_start_game_packet_a78acf6a578300a64554e512b0ee46111}{p2Elo}};}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_has_played_packet}{HasPlayedPacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{struct_has_played_packet_a3429eeaee28e0062692be60a47bd2526}{HasPlayedPacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a5fe288e48c7d34bd48f52d5001802742}{HasPlayed}})\ \{\}}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_has_played_packet_a4ef19b5bfe0e2d2a60ae487f352774a9}{IsFirstTurn}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_has_played_packet_a88826296cd03e107a4feb531f1790e6f}{X}}\ =\ 0,\ \mbox{\hyperlink{struct_has_played_packet_ab2e304fc37664cad4711090a623817d0}{Y}}\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_has_played_packet_a16f71ca89cd99368077936b6e742d171}{index}}\ =\ 0;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_finished_packet}{GameFinishedPacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00067\ \ \ \mbox{\hyperlink{struct_game_finished_packet_ac5502d4f0ccb0bc5e5aec3ed27cef4bf}{GameFinishedPacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a14ef8937ca05013b66a3775578239eb8}{GameFinished}})\ \{\}}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_finished_packet_a39662f7f4386c9948b57c90c9b8473e0}{HasP1Won}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_surrender_packet}{SurrenderPacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{struct_surrender_packet_aacfb8984c989d267a977f2bdc8eb3533}{SurrenderPacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a92fa0b43cbcc2b7610cdb157d273c5fa}{Surrender}})\ \{\}}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_surrender_packet_abc736cd786765d44bbb01a463352e6bd}{hasSurrendered}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_quit_lobby_packet}{QuitLobbyPacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00083\ \ \ \mbox{\hyperlink{struct_quit_lobby_packet_a1ca11461eb8d78fcf8f90a84ad5905b7}{QuitLobbyPacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a0c774ce1dfd436584d75f8173fd1ea9c}{QuitLobby}})\ \{\}}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_quit_lobby_packet_a7a00bae2d6367d1df94be699587f5ab4}{hasQuit}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_invalid_packet}{InvalidPacket}}\ final\ :\ \mbox{\hyperlink{struct_packet}{Packet}}\ \{}
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{struct_invalid_packet_abc2b7f17dbb9a56ff393d76232e9039f}{InvalidPacket}}()\ :\ \mbox{\hyperlink{struct_packet}{Packet}}(\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0}{PacketType}}::\mbox{\hyperlink{packet_8h_a0a80a7bc045affcf10846075b88cbca0a4bbb8f967da6d1a610596d7257179c2b}{Invalid}})\ \{\}}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ Operator\ overloads\ for\ serialization}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_packet}{Packet}}\&\ packetType);}
+\DoxyCodeLine{00097\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_packet}{Packet}}\&\ packetType);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_connect_packet}{ConnectPacket}}\&\ message);}
+\DoxyCodeLine{00100\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_connect_packet}{ConnectPacket}}\&\ message);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_start_game_packet}{StartGamePacket}}\&\ content);}
+\DoxyCodeLine{00103\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_start_game_packet}{StartGamePacket}}\&\ content);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_has_played_packet}{HasPlayedPacket}}\&\ content);}
+\DoxyCodeLine{00106\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_has_played_packet}{HasPlayedPacket}}\&\ content);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_finished_packet}{GameFinishedPacket}}\&\ content);}
+\DoxyCodeLine{00109\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_game_finished_packet}{GameFinishedPacket}}\&\ content);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_surrender_packet}{SurrenderPacket}}\&\ content);}
+\DoxyCodeLine{00112\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_surrender_packet}{SurrenderPacket}}\&\ content);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_a58b42a984231ed7c2eda81a5914509fd}{operator<<}}(sf::Packet\&\ packet,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_quit_lobby_packet}{QuitLobbyPacket}}\&\ content);}
+\DoxyCodeLine{00115\ sf::Packet\&\ \mbox{\hyperlink{packet_8h_ac540a1271ebd21a9fd7e8cb73791be3f}{operator>>}}(sf::Packet\&\ packet,\ \mbox{\hyperlink{struct_quit_lobby_packet}{QuitLobbyPacket}}\&\ content);}
+
+\end{DoxyCode}

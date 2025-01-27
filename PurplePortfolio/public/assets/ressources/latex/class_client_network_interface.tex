@@ -1,0 +1,86 @@
+\doxysection{Client\+Network\+Interface Class Reference}
+\hypertarget{class_client_network_interface}{}\label{class_client_network_interface}\index{ClientNetworkInterface@{ClientNetworkInterface}}
+
+
+Represents an interface for client network communication.  
+
+
+
+
+{\ttfamily \#include $<$client\+\_\+network\+\_\+interface.\+h$>$}
+
+Inheritance diagram for Client\+Network\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_client_network_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_client_network_interface_a83c74458e34e5ba633b148b602d1046d}{\texorpdfstring{$\sim$}{\string~}\+Client\+Network\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor (virtual to allow proper destruction of derived classes). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_client_network_interface_aeee9c737fbeac11d1edced07798a8fba}{Pop\+Packet}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the next packet to process Need to delete the packet after using it. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_client_network_interface_ab1d3d9305fa8b985b510fbb2fa994a93}{Send\+Packet}} (\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}packet)=0
+\begin{DoxyCompactList}\small\item\em Send a packet to the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an interface for client network communication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_client_network_interface_a83c74458e34e5ba633b148b602d1046d}\label{class_client_network_interface_a83c74458e34e5ba633b148b602d1046d} 
+\index{ClientNetworkInterface@{ClientNetworkInterface}!````~ClientNetworkInterface@{\texorpdfstring{$\sim$}{\string~}ClientNetworkInterface}}
+\index{````~ClientNetworkInterface@{\texorpdfstring{$\sim$}{\string~}ClientNetworkInterface}!ClientNetworkInterface@{ClientNetworkInterface}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ClientNetworkInterface()}{\string~ClientNetworkInterface()}}
+{\footnotesize\ttfamily virtual Client\+Network\+Interface\+::\texorpdfstring{$\sim$}{\string~}\+Client\+Network\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructor (virtual to allow proper destruction of derived classes). 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_client_network_interface_aeee9c737fbeac11d1edced07798a8fba}\label{class_client_network_interface_aeee9c737fbeac11d1edced07798a8fba} 
+\index{ClientNetworkInterface@{ClientNetworkInterface}!PopPacket@{PopPacket}}
+\index{PopPacket@{PopPacket}!ClientNetworkInterface@{ClientNetworkInterface}}
+\doxysubsubsection{\texorpdfstring{PopPacket()}{PopPacket()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} Client\+Network\+Interface\+::\+Pop\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the next packet to process Need to delete the packet after using it. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_network_client_manager_ae4b486b0b69ac0c7659c71942c4c645c}{Network\+Client\+Manager}}.
+
+\Hypertarget{class_client_network_interface_ab1d3d9305fa8b985b510fbb2fa994a93}\label{class_client_network_interface_ab1d3d9305fa8b985b510fbb2fa994a93} 
+\index{ClientNetworkInterface@{ClientNetworkInterface}!SendPacket@{SendPacket}}
+\index{SendPacket@{SendPacket}!ClientNetworkInterface@{ClientNetworkInterface}}
+\doxysubsubsection{\texorpdfstring{SendPacket()}{SendPacket()}}
+{\footnotesize\ttfamily virtual void Client\+Network\+Interface\+::\+Send\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send a packet to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet to send \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_network_client_manager_aab14d09317c5cdabe1e580029086d217}{Network\+Client\+Manager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{client__network__interface_8h}{client\+\_\+network\+\_\+interface.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\doxysection{network\+\_\+server\+\_\+manager.\+h}
+\hypertarget{network__server__manager_8h_source}{}\label{network__server__manager_8h_source}\mbox{\hyperlink{network__server__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client__manager_8h}{client\_manager.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{packet__manager_8h}{packet\_manager.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_server_manager}{NetworkServerManager}}\ \{}
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{class_client_manager}{ClientManager}}\ clients;\ \ }
+\DoxyCodeLine{00014\ \ \ sf::TcpListener}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ listener;\ \ }
+\DoxyCodeLine{00016\ \ \ std::function<bool(sf::TcpSocket*,\ \mbox{\hyperlink{struct_packet}{Packet}}*)>}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ onClientMessageReceived;\ \ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{mutable}\ std::mutex\ mutex;\ \ \ \ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{class_network_server_manager_ad325f4bfae2ab2dab17e1d81ebc6c9b0}{NetworkServerManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{class_network_server_manager_a7e2619dd13192647786ffa861ee15696}{\string~NetworkServerManager}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ std::atomic<bool>\ \mbox{\hyperlink{class_network_server_manager_ab68cf2cdd41d572a983c4aebb80ab649}{running}}\ =}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{true};\ \ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_server_manager_a16a02b852986fba54f1130f4c6f83d6e}{Bind}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ port);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_server_manager_aff1a546590ff3e4d86d2cad16b4cbe5f}{ListenToClientPackets}}(}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ std::function<\textcolor{keywordtype}{bool}(sf::TcpSocket*,\ \mbox{\hyperlink{struct_packet}{Packet}}*)>\ onMessageReceived);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_server_manager_a5f5c388ff3d081ca18e4904ea5c3d0ef}{StartThreads}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_server_manager_a0620c09d59e8a0d0d307a11c1317b588}{ReceivePacketFromClient}}(std::size\_t\ clientIndex);}
+\DoxyCodeLine{00062\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,155 @@
+\doxysection{Client\+Manager Class Reference}
+\hypertarget{class_client_manager}{}\label{class_client_manager}\index{ClientManager@{ClientManager}}
+
+
+Manages multiple clients connected to the server.  
+
+
+
+
+{\ttfamily \#include $<$client\+\_\+manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_manager_a00ef828b24ea8d2e7cff0f7ec6834021}{Client\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}{\texorpdfstring{$\sim$}{\string~}\+Client\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_client_manager_a891b7a498ff2a519e2cbf5b24aaf8bc7}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the client manager is empty. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_client_manager_ad45ed5565062aa4b7d25cef3f56e990f}{Add\+Client}} (sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*}socket)
+\begin{DoxyCompactList}\small\item\em Adds a client to the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_manager_ae843552e6726a85c4927ba318f1408dc}{Remove\+Client}} (std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Removes a client from the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_manager_a016a3bb7077460d53da33959af086ce7}{Check\+Packet\+To\+Be\+Sent}} ()
+\begin{DoxyCompactList}\small\item\em Checks packets to be sent for all clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_manager_a7835943f126f9d2b318866022180fdce}{Send\+Packet\+To\+All\+Clients}} (\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}packet, sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*}sender=nullptr)
+\begin{DoxyCompactList}\small\item\em Sends a packet to all clients. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_client_manager_a0c06ff139fd2e2867d4b87c25941fd48}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Accesses a client in the manager by index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages multiple clients connected to the server. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_client_manager_a00ef828b24ea8d2e7cff0f7ec6834021}\label{class_client_manager_a00ef828b24ea8d2e7cff0f7ec6834021} 
+\index{ClientManager@{ClientManager}!ClientManager@{ClientManager}}
+\index{ClientManager@{ClientManager}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{ClientManager()}{ClientManager()}}
+{\footnotesize\ttfamily Client\+Manager\+::\+Client\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}\label{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3} 
+\index{ClientManager@{ClientManager}!````~ClientManager@{\texorpdfstring{$\sim$}{\string~}ClientManager}}
+\index{````~ClientManager@{\texorpdfstring{$\sim$}{\string~}ClientManager}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ClientManager()}{\string~ClientManager()}}
+{\footnotesize\ttfamily Client\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Client\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_client_manager_ad45ed5565062aa4b7d25cef3f56e990f}\label{class_client_manager_ad45ed5565062aa4b7d25cef3f56e990f} 
+\index{ClientManager@{ClientManager}!AddClient@{AddClient}}
+\index{AddClient@{AddClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{AddClient()}{AddClient()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Client\+Manager\+::\+Add\+Client (\begin{DoxyParamCaption}\item[{sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*}}]{socket }\end{DoxyParamCaption})}
+
+
+
+Adds a client to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Pointer to the TCP socket associated with the client. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the added client in the clients vector. 
+\end{DoxyReturn}
+\Hypertarget{class_client_manager_a016a3bb7077460d53da33959af086ce7}\label{class_client_manager_a016a3bb7077460d53da33959af086ce7} 
+\index{ClientManager@{ClientManager}!CheckPacketToBeSent@{CheckPacketToBeSent}}
+\index{CheckPacketToBeSent@{CheckPacketToBeSent}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{CheckPacketToBeSent()}{CheckPacketToBeSent()}}
+{\footnotesize\ttfamily void Client\+Manager\+::\+Check\+Packet\+To\+Be\+Sent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks packets to be sent for all clients. 
+
+\Hypertarget{class_client_manager_a891b7a498ff2a519e2cbf5b24aaf8bc7}\label{class_client_manager_a891b7a498ff2a519e2cbf5b24aaf8bc7} 
+\index{ClientManager@{ClientManager}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Client\+Manager\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the client manager is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the client manager is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_client_manager_a0c06ff139fd2e2867d4b87c25941fd48}\label{class_client_manager_a0c06ff139fd2e2867d4b87c25941fd48} 
+\index{ClientManager@{ClientManager}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} \texorpdfstring{$\ast$}{*} Client\+Manager\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Accesses a client in the manager by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the client to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the client at the specified index. 
+\end{DoxyReturn}
+\Hypertarget{class_client_manager_ae843552e6726a85c4927ba318f1408dc}\label{class_client_manager_ae843552e6726a85c4927ba318f1408dc} 
+\index{ClientManager@{ClientManager}!RemoveClient@{RemoveClient}}
+\index{RemoveClient@{RemoveClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{RemoveClient()}{RemoveClient()}}
+{\footnotesize\ttfamily void Client\+Manager\+::\+Remove\+Client (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Removes a client from the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the client to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_client_manager_a7835943f126f9d2b318866022180fdce}\label{class_client_manager_a7835943f126f9d2b318866022180fdce} 
+\index{ClientManager@{ClientManager}!SendPacketToAllClients@{SendPacketToAllClients}}
+\index{SendPacketToAllClients@{SendPacketToAllClients}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{SendPacketToAllClients()}{SendPacketToAllClients()}}
+{\footnotesize\ttfamily void Client\+Manager\+::\+Send\+Packet\+To\+All\+Clients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}}]{packet,  }\item[{sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*}}]{sender = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Sends a packet to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the packet to be sent. \\
+\hline
+{\em sender} & Pointer to the TCP socket of the sender client (optional). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{client__manager_8h}{client\+\_\+manager.\+h}}\end{DoxyCompactItemize}

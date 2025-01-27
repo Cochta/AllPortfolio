@@ -1,0 +1,17 @@
+\doxysection{client\+\_\+network\+\_\+interface.\+h}
+\hypertarget{client__network__interface_8h_source}{}\label{client__network__interface_8h_source}\mbox{\hyperlink{client__network__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{packet_8h}{Packet.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client_network_interface}{ClientNetworkInterface}}\ \{}
+\DoxyCodeLine{00009\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_client_network_interface_a83c74458e34e5ba633b148b602d1046d}{\string~ClientNetworkInterface}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_packet}{Packet}}*\ \mbox{\hyperlink{class_client_network_interface_aeee9c737fbeac11d1edced07798a8fba}{PopPacket}}()\ =\ 0;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_network_interface_ab1d3d9305fa8b985b510fbb2fa994a93}{SendPacket}}(\mbox{\hyperlink{struct_packet}{Packet}}*\ packet)\ =\ 0;}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

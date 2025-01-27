@@ -1,0 +1,142 @@
+\doxysection{Network\+Server\+Manager Class Reference}
+\hypertarget{class_network_server_manager}{}\label{class_network_server_manager}\index{NetworkServerManager@{NetworkServerManager}}
+
+
+Manages the server-\/side networking operations.  
+
+
+
+
+{\ttfamily \#include $<$network\+\_\+server\+\_\+manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_server_manager_ad325f4bfae2ab2dab17e1d81ebc6c9b0}{Network\+Server\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_network_server_manager_a7e2619dd13192647786ffa861ee15696}{\texorpdfstring{$\sim$}{\string~}\+Network\+Server\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_server_manager_a16a02b852986fba54f1130f4c6f83d6e}{Bind}} (unsigned short port)
+\begin{DoxyCompactList}\small\item\em Binds the server to the specified port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_server_manager_aff1a546590ff3e4d86d2cad16b4cbe5f}{Listen\+To\+Client\+Packets}} (std\+::function$<$ bool(sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*})$>$ on\+Message\+Received)
+\begin{DoxyCompactList}\small\item\em Listens to packets from clients. Returns false to disconnect the client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_server_manager_a5f5c388ff3d081ca18e4904ea5c3d0ef}{Start\+Threads}} ()
+\begin{DoxyCompactList}\small\item\em Starts the threads for the server to accept new clients and send/receive packets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_server_manager_a0620c09d59e8a0d0d307a11c1317b588}{Receive\+Packet\+From\+Client}} (std\+::size\+\_\+t client\+Index)
+\begin{DoxyCompactList}\small\item\em Receives a packet from a specific client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{class_network_server_manager_ab68cf2cdd41d572a983c4aebb80ab649}{running}}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the server is running. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the server-\/side networking operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_network_server_manager_ad325f4bfae2ab2dab17e1d81ebc6c9b0}\label{class_network_server_manager_ad325f4bfae2ab2dab17e1d81ebc6c9b0} 
+\index{NetworkServerManager@{NetworkServerManager}!NetworkServerManager@{NetworkServerManager}}
+\index{NetworkServerManager@{NetworkServerManager}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{NetworkServerManager()}{NetworkServerManager()}}
+{\footnotesize\ttfamily Network\+Server\+Manager\+::\+Network\+Server\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_network_server_manager_a7e2619dd13192647786ffa861ee15696}\label{class_network_server_manager_a7e2619dd13192647786ffa861ee15696} 
+\index{NetworkServerManager@{NetworkServerManager}!````~NetworkServerManager@{\texorpdfstring{$\sim$}{\string~}NetworkServerManager}}
+\index{````~NetworkServerManager@{\texorpdfstring{$\sim$}{\string~}NetworkServerManager}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NetworkServerManager()}{\string~NetworkServerManager()}}
+{\footnotesize\ttfamily Network\+Server\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Network\+Server\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_network_server_manager_a16a02b852986fba54f1130f4c6f83d6e}\label{class_network_server_manager_a16a02b852986fba54f1130f4c6f83d6e} 
+\index{NetworkServerManager@{NetworkServerManager}!Bind@{Bind}}
+\index{Bind@{Bind}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily bool Network\+Server\+Manager\+::\+Bind (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+Binds the server to the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number to bind to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if binding is successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_network_server_manager_aff1a546590ff3e4d86d2cad16b4cbe5f}\label{class_network_server_manager_aff1a546590ff3e4d86d2cad16b4cbe5f} 
+\index{NetworkServerManager@{NetworkServerManager}!ListenToClientPackets@{ListenToClientPackets}}
+\index{ListenToClientPackets@{ListenToClientPackets}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{ListenToClientPackets()}{ListenToClientPackets()}}
+{\footnotesize\ttfamily void Network\+Server\+Manager\+::\+Listen\+To\+Client\+Packets (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool(sf\+::\+Tcp\+Socket \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*})$>$}]{on\+Message\+Received }\end{DoxyParamCaption})}
+
+
+
+Listens to packets from clients. Returns false to disconnect the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Message\+Received} & Callback function to be called when a packet is received (other than acknowledgement and invalid). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_server_manager_a0620c09d59e8a0d0d307a11c1317b588}\label{class_network_server_manager_a0620c09d59e8a0d0d307a11c1317b588} 
+\index{NetworkServerManager@{NetworkServerManager}!ReceivePacketFromClient@{ReceivePacketFromClient}}
+\index{ReceivePacketFromClient@{ReceivePacketFromClient}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{ReceivePacketFromClient()}{ReceivePacketFromClient()}}
+{\footnotesize\ttfamily void Network\+Server\+Manager\+::\+Receive\+Packet\+From\+Client (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{client\+Index }\end{DoxyParamCaption})}
+
+
+
+Receives a packet from a specific client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Index} & The index of the client to receive the packet from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_server_manager_a5f5c388ff3d081ca18e4904ea5c3d0ef}\label{class_network_server_manager_a5f5c388ff3d081ca18e4904ea5c3d0ef} 
+\index{NetworkServerManager@{NetworkServerManager}!StartThreads@{StartThreads}}
+\index{StartThreads@{StartThreads}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{StartThreads()}{StartThreads()}}
+{\footnotesize\ttfamily void Network\+Server\+Manager\+::\+Start\+Threads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the threads for the server to accept new clients and send/receive packets. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_network_server_manager_ab68cf2cdd41d572a983c4aebb80ab649}\label{class_network_server_manager_ab68cf2cdd41d572a983c4aebb80ab649} 
+\index{NetworkServerManager@{NetworkServerManager}!running@{running}}
+\index{running@{running}!NetworkServerManager@{NetworkServerManager}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ Network\+Server\+Manager\+::running}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{true}}
+
+\end{DoxyCode}
+
+
+Flag indicating if the server is running. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{network__server__manager_8h}{network\+\_\+server\+\_\+manager.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\doxysection{Packet\+Manager Namespace Reference}
+\hypertarget{namespace_packet_manager}{}\label{namespace_packet_manager}\index{PacketManager@{PacketManager}}
+
+
+Namespace for managing packets.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_packet_manager_a1113095a120cf08d6f7066f2225121f8}{Send\+Packet}} (sf\+::\+Tcp\+Socket \&socket, \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}packet)
+\begin{DoxyCompactList}\small\item\em Sends a packet over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_packet_manager_ae91026b09086598f32ee710910edeeb2}{Receive\+Packet}} (sf\+::\+Tcp\+Socket \&socket)
+\begin{DoxyCompactList}\small\item\em Receives a packet from a TCP socket. \end{DoxyCompactList}\item 
+sf\+::\+Packet \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_packet_manager_a8c686834e212a9a4351e4bd3d64b8036}{Create\+Packet}} (\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}packet)
+\begin{DoxyCompactList}\small\item\em Creates an sf\+::\+Packet from a \doxylink{struct_packet}{Packet} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace for managing packets. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_packet_manager_a8c686834e212a9a4351e4bd3d64b8036}\label{namespace_packet_manager_a8c686834e212a9a4351e4bd3d64b8036} 
+\index{PacketManager@{PacketManager}!CreatePacket@{CreatePacket}}
+\index{CreatePacket@{CreatePacket}!PacketManager@{PacketManager}}
+\doxysubsubsection{\texorpdfstring{CreatePacket()}{CreatePacket()}}
+{\footnotesize\ttfamily sf\+::\+Packet \texorpdfstring{$\ast$}{*} Packet\+Manager\+::\+Create\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}}]{packet }\end{DoxyParamCaption})}
+
+
+
+Creates an sf\+::\+Packet from a \doxylink{struct_packet}{Packet} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the packet to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created sf\+::\+Packet. 
+\end{DoxyReturn}
+\Hypertarget{namespace_packet_manager_ae91026b09086598f32ee710910edeeb2}\label{namespace_packet_manager_ae91026b09086598f32ee710910edeeb2} 
+\index{PacketManager@{PacketManager}!ReceivePacket@{ReceivePacket}}
+\index{ReceivePacket@{ReceivePacket}!PacketManager@{PacketManager}}
+\doxysubsubsection{\texorpdfstring{ReceivePacket()}{ReceivePacket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*} Packet\+Manager\+::\+Receive\+Packet (\begin{DoxyParamCaption}\item[{sf\+::\+Tcp\+Socket \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+Receives a packet from a TCP socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Reference to the TCP socket to receive the packet from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the received packet. 
+\end{DoxyReturn}
+\Hypertarget{namespace_packet_manager_a1113095a120cf08d6f7066f2225121f8}\label{namespace_packet_manager_a1113095a120cf08d6f7066f2225121f8} 
+\index{PacketManager@{PacketManager}!SendPacket@{SendPacket}}
+\index{SendPacket@{SendPacket}!PacketManager@{PacketManager}}
+\doxysubsubsection{\texorpdfstring{SendPacket()}{SendPacket()}}
+{\footnotesize\ttfamily bool Packet\+Manager\+::\+Send\+Packet (\begin{DoxyParamCaption}\item[{sf\+::\+Tcp\+Socket \&}]{socket,  }\item[{\mbox{\hyperlink{struct_packet}{Packet}} \texorpdfstring{$\ast$}{*}}]{packet }\end{DoxyParamCaption})}
+
+
+
+Sends a packet over a TCP socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Reference to the TCP socket. \\
+\hline
+{\em packet} & Pointer to the packet to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the packet is sent successfully, false otherwise. 
+\end{DoxyReturn}
