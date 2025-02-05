@@ -4,7 +4,7 @@ publishDate: 2020-03-04 00:00:00
 img: /assets/bark.png
 img_alt: physics motor base image
 description: |
-  I developed a 2D physics engine
+  I developed a 2D physics engine and did some optimisation on a Quadtree
 tags:
   - Physics
   - Quad Tree
@@ -125,20 +125,23 @@ Here is again the same example with 100 circles, 100 rectangles and 100 triangle
 
 The tables below are a proof that the optimisation is real.
 
-Population      | Mean (ms) | Median (ms) | Std dev (ms) |
-----------------|-----------|-------------|--------------|
-Normal update   |   26.25   |    25.96    |     1.47     |
-Quad tree update|   0.093   |    0.032    |     0.271    |
+|Population      | Mean (ms) | Median (ms) | Std dev (ms) |
+:----------------|:-----------|:-------------|:--------------|
+|Normal update   |   26.25   |    25.96    |     1.47     |
+|Quad tree update|   0.093   |    0.032    |     0.271    |
+
 [Comparison of the update with and without the quad tree based on 200 frames]
 
-P(T<=t) two-tail| t Critical two-tail |
-----------------|---------------------|
-1.10E-248       |     1.971603452     |
+|P(T<=t) two-tail| t Critical two-tail |
+|:----------------|:---------------------|
+|1.10E-248       |     1.971603452     |
+
 [Student T-test using alpha at 5%]
 
-Mean difference (ms)| Standard error (ms) | Margin of error (ms) | Minimal limit (ms) | Maximal limit (ms) |
---------------------|---------------------|----------------------|--------------------|--------------------|
-26,535624           |   0.1162437836      |    0.2291866451      |26.30643735         |26.76481065         |
+|Mean difference (ms)| Standard error (ms) | Margin of error (ms) | Minimal limit (ms) | Maximal limit (ms) |
+|:--------------------|:---------------------|:----------------------|:--------------------|:--------------------|
+|26,535624           |   0.1162437836      |    0.2291866451      |26.30643735         |26.76481065         |
+
 [here we can see that the minimal optimisation is about 26.3 ms ]
 
 ### Second implementation
@@ -160,3 +163,5 @@ See Also
 ==============================================================
 
 [My GitHub page](https://github.com/Cochta).
+
+[My Itch.io page](https://cochta.itch.io).
