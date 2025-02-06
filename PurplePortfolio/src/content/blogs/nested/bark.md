@@ -10,6 +10,7 @@ tags:
   - Quad Tree
   - C++
 ---
+
 **Bark Blogpost**
 Version 1.23
 
@@ -118,6 +119,7 @@ We can now see it is already way better than the naive implementation.
 Here is again the same example with 100 circles, 100 rectangles and 100 triangles.
 
 ![The collision update now takes only half the frame](/assets/ressources/ressourceBark/Tracy_Update_QuadTree_First.PNG)
+
 
 ![We can see that it is way smoother](/assets/ressources/ressourceBark/Video_Update_QuadTree_First.mp4)
 

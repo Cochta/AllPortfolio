@@ -11,6 +11,7 @@ import Pill from '../../components/Pill.astro';
 interface Props {
 	entry: CollectionEntry<'blogs'>;
 }
+const posts = await getCollection('blogs');
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
@@ -46,9 +47,9 @@ const { Content } = await entry.render();
 			<main class="wrapper">
 				<div class="stack gap-10 content">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
-					<div class="content">
+					<div class="content">	
 						<Content />
-					</div>
+					  </div>
 				</div>
 			</main>
 		</div>
@@ -86,9 +87,9 @@ const { Content } = await entry.render();
 	}
 
 	.content {
-		max-width: 65ch;
+		max-width: 80%;
 		margin-inline: auto;
-	}
+	}	
 
 	.content > :global(* + *) {
 		margin-top: 1rem;
@@ -103,7 +104,7 @@ const { Content } = await entry.render();
 	}
 
 	.content :global(img) {
-		border-radius: 1.5rem;
+		border-radius: 0.7rem;
 		box-shadow: var(--shadow-sm);
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
