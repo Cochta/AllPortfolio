@@ -1,20 +1,15 @@
 ---
-title: Rambouille
-publishDate: 2024-12-01 00:00:00
-img: /assets/Rambouille.png
-img_alt: Image of the game
+title: DirectX11 Rendering
+publishDate: 2019-10-02 00:00:00
+img: /assets/minecraft.png
+img_alt: Prototype iamge
 description: |
-  I developed a small 2d platformer prototype on Unity using free assets
+  I developped a small minecraft like world generation using DirectX11 for rendering
 tags:
-  - Unity
-  - Plateformer
-  - 2D
   - Dev
+  - DirectX11
+  - Minecraft
 ---
-
-<iframe frameborder="0" src="https://itch.io/embed/2392249?bg_color=838383&amp;fg_color=000000&amp;link_color=FFD700&amp;border_color=949494" width="208" height="167"><a href="https://cochta.itch.io/rambouille">Rambouille by Cochta</a></iframe>
-
-<iframe frameborder="0" src="https://itch.io/embed-upload/9193479?color=bababa" allowfullscreen="" width="1920" height="1100"><a href="https://cochta.itch.io/rambouille">Play Rambouille on itch.io</a></iframe>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
 

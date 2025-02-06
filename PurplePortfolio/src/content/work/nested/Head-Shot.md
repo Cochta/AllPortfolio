@@ -1,14 +1,14 @@
 ---
 title: Head-Shot
-publishDate: 2020-03-02 00:00:00
+publishDate: 2024-11-01 00:00:00
 img: /assets/headshot.png
 img_alt: image of the game
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  I developped a small online 2 player head-soccer like game with a rollback engine
 tags:
-  - Design
   - Dev
-  - User Testing
+  - Online
+  - Rollback
 ---
 
 ## Level-two heading

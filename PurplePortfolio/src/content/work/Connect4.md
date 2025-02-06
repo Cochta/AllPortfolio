@@ -1,14 +1,14 @@
 ---
-title: Bark Physics Engine
-publishDate: 2019-12-01 00:00:00
-img: /assets/bark.png
-img_alt: Image of the collision scene
+title: Connect 4
+publishDate: 2019-10-02 00:00:00
+img: /assets/connect4.png
+img_alt: Image of the game
 description: |
-  I developed a 2D physics engine from scratch with triggers, collisions and space subdivision
+  I developed a small online 2 player connect 4 game using SFML library and my own TCP system
 tags:
+  - Online
   - Dev
-  - Branding
-  - Backend
+  - TCP
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.

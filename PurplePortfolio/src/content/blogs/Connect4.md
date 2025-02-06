@@ -2,7 +2,7 @@
 title: Connect 4
 publishDate: 2020-03-02 00:00:00
 img: /assets/connect4.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: image of the game
 description: |
   I developed a small online 2 player connect 4 game using SFML library and my own TCP system
 tags:
