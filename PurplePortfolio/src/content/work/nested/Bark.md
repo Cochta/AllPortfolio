@@ -13,21 +13,19 @@ tags:
   - Optimisation
 ---
 
-### Context
+### Overview
 
-This **physics engine** was programmed during a **module** on **physics**, **maths**, **optimisation**, **CPU architecture** and **profiling** at SAE Institut Geneva in the **2nd year of a bachelor’s degree in Games Programming**.
+This physics engine was developed as part of a module covering physics, mathematics, optimization, CPU architecture, and profiling during the second year of a Bachelor's degree in Games Programming at SAE Institute Geneva.
 
-The **goal** was to write the **engine** as an **API** that anyone could use, and to **optimise** it accordingly. The **engine** had to be capable of running a **sample** with 1000 colliders in **trigger** mode at a minimum of **60fps**.
+The primary objective was to design the engine as a user-friendly API while optimizing its performance. A key requirement was ensuring that the engine could run a sample scene with 1,000 colliders in trigger mode at a minimum of 60 FPS.
 
-We wrote our own **maths library** as well as standard C++ classes such as **smart pointers** in order to use our **custom allocators** to **profile** the program’s **memory management**.
+To achieve this, I implemented a custom mathematics library (done with the help of my classmates) and developed essential C++ utilities, including smart pointers, allowing me to integrate custom memory allocators for profiling and optimizing memory management.
 
 ### How it looks like
 
 Here is a demo on my itch.io page.
 
-<p><iframe class="embed" frameborder="0" src="https://itch.io/embed/2594683?bg_color=838383&amp;fg_color=000000&amp;link_color=FFD700&amp;border_color=949494" width="208" height="167"><a href="https://cochta.itch.io/bark-demo">Bark Demo by Cochta</a></iframe></p>
-
-<p><iframe class="embed" frameborder="0" src="https://itch.io/embed-upload/9975414?color=bababa" allowfullscreen="" width="1200" height="820"><a href="https://cochta.itch.io/bark-demo">Play Bark Demo on itch.io</a></iframe></p>
+<iframe frameborder="0" src="https://itch.io/embed-upload/9975414?color=bababa" allowfullscreen="" width="100%" height="820"><a href="https://cochta.itch.io/bark-demo">Play Bark Demo on itch.io</a></iframe>
 
 ### What did I learn
 
@@ -45,3 +43,9 @@ Here is a demo on my itch.io page.
   - Cache hit
   - Quadtree
 - How a modern CPU works
+
+### Source Code & Download
+
+- [GitHub Repository](https://github.com/Cochta/Bark).
+- [Download link](https://github.com/Cochta/Bark/releases/download/1.0/SamplesRelease.zip)
+- [Test it on my Itch.io page](https://cochta.itch.io/bark-demo).

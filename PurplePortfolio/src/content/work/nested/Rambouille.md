@@ -12,16 +12,35 @@ tags:
   - Dev
 ---
 
-<iframe frameborder="0" src="https://itch.io/embed/2392249?bg_color=838383&amp;fg_color=000000&amp;link_color=FFD700&amp;border_color=949494" width="208" height="167"><a href="https://cochta.itch.io/rambouille">Rambouille by Cochta</a></iframe>
+### Overview
 
-<iframe frameborder="0" src="https://itch.io/embed-upload/9193479?color=bababa" allowfullscreen="" width="1920" height="1100"><a href="https://cochta.itch.io/rambouille">Play Rambouille on itch.io</a></iframe>
+Rambouille is a 2D platformer developed in Unity during the first year of my Bachelor's degree in Games Programming at SAE Institute Geneva. The project was an introduction to game development, focusing on gameplay mechanics, physics, and level design.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+The game features fast-paced platforming challenges, requiring precise movement and timing. Throughout development, we worked on refining player controls, collision handling, and designing engaging levels to create a smooth and rewarding gameplay experience.
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+This project provided valuable experience in Unity's C# scripting, physics systems, and optimization techniques, laying the groundwork for more advanced game development projects in the future.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+### How it looks like
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Here is a demo on my itch.io page.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+<iframe frameborder="0" src="https://itch.io/embed-upload/9193479?color=bababa" width="100%" height="580">a href="https://cochta.itch.io/rambouille">Play Rambouille on itch.io</a></iframe>
+
+### What did I learn
+
+- Unity development using C#
+- 2D physics and collision handling
+- Implementing smooth and responsive player controls
+- Scene management and level transitions
+- Animation handling with Unity’s Animator
+- UI design and implementation (menus, HUD)
+- Designing engaging and challenging platforming mechanics
+- Balancing difficulty and player progression
+- Iterating on level design for better flow and pacing
+- Debugging and playtesting to improve the gameplay experience
+
+### Source Code & Download
+
+- [GitHub Repository](https://github.com/Cochta/Rambouille).
+- [Download link](https://github.com/Cochta/Rambouille/releases/download/V1.0/Rambouille.zip)
+- [Test it on my Itch.io page](https://cochta.itch.io/Rambouille).

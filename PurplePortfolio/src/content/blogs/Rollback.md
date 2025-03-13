@@ -25,7 +25,12 @@ A game lasts 1:30 minutes at the end of the time the player having the highest s
 
 The project was done in the scope of 1 month.
 
-![A match played in real conditions](/assets/ressources/ressourceRollback/HeadShot.mp4)
+<video controls width="100%">
+  <source src="/assets/ressources/ressourceRollback/HeadShot.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+A match played in real conditions
 
 Goals
 --------------------------------------------------------------

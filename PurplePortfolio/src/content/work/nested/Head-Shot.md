@@ -11,25 +11,44 @@ tags:
   - Rollback
 ---
 
-## Level-two heading
+### Overview
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+Head-Shot is an online multiplayer game inspired by Head Soccer, developed in C++ with a custom rollback netcode engine. The project was a deep dive into real-time networking, latency compensation, and deterministic game logic.
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+The primary challenge was implementing a rollback engine to ensure smooth online gameplay, even under high latency conditions. This involved synchronizing game states, predicting player inputs, and efficiently handling network corrections to maintain a seamless experience.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+Beyond networking, the game features physics-driven character movement, responsive controls, and competitive gameplay designed for fast-paced matches. Developing Head-Shot provided valuable experience in networking architecture, low-level optimization, and multiplayer game design.
 
-### Level-three heading
+Head-Shot uses "[Bark](/work/nested/bark)" my own physics engine. 
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+### How it looks like
 
-### Level-three heading
+A match played in real conditions
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+<video controls width="100%">
+  <source src="/assets/ressources/ressourceRollback/HeadShot.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+### What did I learn
 
-#### Level-four heading
+- Implementing rollback netcode for smooth online multiplayer gameplay
+- Handling input prediction and state synchronization to reduce latency effects
+- Managing network corrections and reconciling game states efficiently
+- Understanding and mitigating desynchronization issues
+- Developing a real-time physics-based game in C++
+- Ensuring deterministic behavior for consistent multiplayer synchronization
+- Optimizing game logic to handle real-time updates with minimal performance impact
+- Creating a responsive input system for competitive gameplay
+- Handling memory management and performance optimizations in C++
+- Implementing custom data structures to improve efficiency
+- Profiling and debugging network-related performance bottlenecks
+- Working on a complex multiplayer system from scratch
+- Testing and debugging networking issues in real-world conditions
+- Managing a project with high technical complexity and performance constraints
 
-- We noted this
-- And also this other point
+### Source Code & Download
+
+- [GitHub Repository](https://github.com/Cochta/Head-Shot).
+- [Download link](https://github.com/Cochta/Head-Shot/releases/download/1.0/Head.Shot.zip)
+

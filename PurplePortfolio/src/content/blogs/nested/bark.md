@@ -58,7 +58,12 @@ Here is an example with 100 circles, 100 rectangles and 100 triangles.
 
 ![89'700 checks](/assets/ressources/ressourceBark/Tracy_Update_AllXAll.PNG)
 
-![We can see how slow and lagged it is](/assets/ressources/ressourceBark/Video_Update_AllXAll.mp4)
+<video controls width="100%">
+  <source src="/assets/ressources/ressourceBark/Video_Update_AllXAll.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+We can see how slow and lagged it is
+
 
 ### Second implementation
 
@@ -78,7 +83,12 @@ Here is the same example with 100 circles, 100 rectangles and 100 triangles.
 
 ![44'850 checks](/assets/ressources/ressourceBark/Tracy_Update_AllXOther.PNG)
 
-![A bit faster and fewer lags but still not good enough](/assets/ressources/ressourceBark/Video_Update_AllXOther.mp4)
+<video controls width="100%">
+  <source src="/assets/ressources/ressourceBark/Video_Update_AllXOther.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+A bit faster and fewer lags but still not good enough
+
 
 QuadTree implementation
 --------------------------------------------------------------
@@ -120,31 +130,70 @@ Here is again the same example with 100 circles, 100 rectangles and 100 triangle
 
 ![The collision update now takes only half the frame](/assets/ressources/ressourceBark/Tracy_Update_QuadTree_First.PNG)
 
-
-![We can see that it is way smoother](/assets/ressources/ressourceBark/Video_Update_QuadTree_First.mp4)
+<video controls width="100%">
+  <source src="/assets/ressources/ressourceBark/Video_Update_QuadTree_First.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+We can see that it is way smoother
 
 #### Some statistics
 
-The tables below are a proof that the optimisation is real.
+<p>The tables below are a proof that the optimisation is real.</p>
 
-|Population      | Mean (ms) | Median (ms) | Std dev (ms) |
-:----------------|:-----------|:-------------|:--------------|
-|Normal update   |   26.25   |    25.96    |     1.47     |
-|Quad tree update|   0.093   |    0.032    |     0.271    |
+<table border="5">
+  <tr>
+    <th>Population</th>
+    <th>Mean (ms)</th>
+    <th>Median (ms)</th>
+    <th>Std dev (ms)</th>
+  </tr>
+  <tr>
+    <td>Normal update</td>
+    <td>26.25</td>
+    <td>25.96</td>
+    <td>1.47</td>
+  </tr>
+  <tr>
+    <td>Quad tree update</td>
+    <td>0.093</td>
+    <td>0.032</td>
+    <td>0.271</td>
+  </tr>
+</table>
 
-[Comparison of the update with and without the quad tree based on 200 frames]
+<p><em>Comparison of the update with and without the quad tree based on 200 frames</em></p>
 
-|P(T<=t) two-tail| t Critical two-tail |
-|:----------------|:---------------------|
-|1.10E-248       |     1.971603452     |
+<table border="5">
+  <tr>
+    <th>P(T<=t) two-tail</th>
+    <th>t Critical two-tail</th>
+  </tr>
+  <tr>
+    <td>1.10E-248</td>
+    <td>1.971603452</td>
+  </tr>
+</table>
 
-[Student T-test using alpha at 5%]
+<p><em>Student T-test using alpha at 5%</em></p>
 
-|Mean difference (ms)| Standard error (ms) | Margin of error (ms) | Minimal limit (ms) | Maximal limit (ms) |
-|:--------------------|:---------------------|:----------------------|:--------------------|:--------------------|
-|26,535624           |   0.1162437836      |    0.2291866451      |26.30643735         |26.76481065         |
+<table border="5">
+  <tr>
+    <th>Mean difference (ms)</th>
+    <th>Standard error (ms)</th>
+    <th>Margin of error (ms)</th>
+    <th>Minimal limit (ms)</th>
+    <th>Maximal limit (ms)</th>
+  </tr>
+  <tr>
+    <td>26.535624</td>
+    <td>0.1162437836</td>
+    <td>0.2291866451</td>
+    <td>26.30643735</td>
+    <td>26.76481065</td>
+  </tr>
+</table>
 
-[here we can see that the minimal optimisation is about 26.3 ms ]
+<p><em>Here we can see that the minimal optimisation is about 26.3 ms</em></p>
 
 ### Second implementation
 
@@ -164,6 +213,6 @@ I honestly hope, you enjoyed it :)
 See Also
 ==============================================================
 
-[My GitHub page](https://github.com/Cochta).
-
-[My Itch.io page](https://cochta.itch.io).
+- [GitHub Repository](https://github.com/Cochta/Bark).
+- [Download link](https://github.com/Cochta/Bark/releases/download/1.0/SamplesRelease.zip)
+- [Test it on my Itch.io page](https://cochta.itch.io/bark-demo).
